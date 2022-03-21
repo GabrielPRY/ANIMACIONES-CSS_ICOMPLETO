@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+        }
+
+        .container {
+            height: 500px;
+            background: #0f9bf6;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .content {
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+            font-size: 2em;
+            color: rgba(255, 255, 255, .8);
+        }
+
+
+        .wave {
+            width: 2402px;
+            height: 427px;
+            background: url(waves.png) center bottom no-repeat;
+            position: absolute;
+            left: -180px;
+            bottom: 0;
+            animation: 5s wave ease-in-out infinite alternate;
+        }
+
+        .wave.a{
+            
+        }
+
+        .wave.b {
+            animation-delay: .6s;
+        }
+
+        .wave.c {
+            animation-delay: 1.2s;
+        }
+
+        .waves {
+            position: absolute;
+            /* left: 0;
+            right: 0;
+            height: 200px;
+            bottom: 0; */
+
+            bottom: -135px;
+            height: 527px;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        @keyframes wave {
+            from {
+                transform: translate3d(0, 0, 0);
+            }
+
+            50% {
+                transform: translate3d(-80px, 30px);
+            }
+
+            to {
+                transform: translate3d(160px, -60px, 0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="content">
+            <h1>Hola Mundo!</h1>
+            <p>No sé que hacer con mi vida!</p>
+        </div>
+        <div class="waves">
+            <div class="wave a"></div>
+            <div class="wave b"></div>
+            <div class="wave c"></div>
+        </div>
+    </div>
+</body>
+
+</html>

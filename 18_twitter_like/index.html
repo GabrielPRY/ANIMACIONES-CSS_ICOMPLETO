@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Twitter</title>
+    <style>
+        body {
+            display: flex;
+            height: 100vh;
+            margin: 0;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .like {
+            cursor: pointer;
+            background: url('twitter-bird-sprite.png');
+            /* width: 150px;
+            height: 150px; */
+            width: 75px;
+            height: 75px;
+            background-size: 300px 80px;
+
+        }
+
+        .like.is-liked {
+            animation-name: like;
+            animation-duration: 1s;
+            /* 600/4=150 */
+            animation-timing-function: steps(4);
+            /* background-position: -600px 0; */
+            /* background-position: right; */
+            animation-fill-mode: backwards;
+        }
+
+        @keyframes like {
+            from {
+                background-position: 0 0;
+            }
+
+            to {
+                /* background-position: -600px 0; */
+                background-position: right;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="tweet-box">
+        <div class="like" id="like"></div>
+    </div>
+    <script>
+        var like = document.getElementById('like');
+        like.addEventListener('click', (event) => {
+            console.log(event);
+            like.classList.toggle('is-liked');
+        })
+    </script>
+</body>
+
+</html>

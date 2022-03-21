@@ -1,0 +1,27 @@
+ body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    height: 100vh;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.container{
+    border: 1px solid red;
+}
+
+.container:hover .cuadrado{
+    /* transform: skew(45deg,50deg); */
+    transform: skewY(23deg);
+}
+
+.cuadrado{
+    width: 200px;
+    height: 200px;
+    background: #7dc900;
+    margin: 20px;
+   transition: 3seg;
+}
